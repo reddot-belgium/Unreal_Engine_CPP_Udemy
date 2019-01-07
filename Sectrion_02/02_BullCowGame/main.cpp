@@ -8,12 +8,18 @@ string GetGuessAndPrintBack();
 int main() {
 
 	PrintIntro();
-	GetGuessAndPrintBack();
-	GetGuessAndPrintBack();
+
+	// loop het aantal keren dat gevraagt word
+	constexpr int NUMBER_OF_TURNS = 5;
+
+	for (int count = 1; count <= NUMBER_OF_TURNS; count++) {
+		GetGuessAndPrintBack();
+	}
+	
 
 	return 0;
 }
-
+	
 void PrintIntro() {
 	// voorstellen van het spel
 	constexpr int WORD_LENGTH = 5;
@@ -22,6 +28,7 @@ void PrintIntro() {
 	cout << " letter isogram i'm thinking of?" << endl;
 	return;
 }
+
 string GetGuessAndPrintBack() {
 	// krijg een woord van de speler
 	string Guess = "";
