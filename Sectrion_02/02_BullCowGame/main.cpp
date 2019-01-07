@@ -3,21 +3,15 @@
 using namespace std;
 
 void PrintIntro();
-string GetGuessAndPrintBack();
+void PlayGame();
+string GetGues();
+
 
 int main() {
 
 	PrintIntro();
-
-	// loop het aantal keren dat gevraagt word
-	constexpr int NUMBER_OF_TURNS = 5;
-
-	for (int count = 1; count <= NUMBER_OF_TURNS; count++) {
-		GetGuessAndPrintBack();
-	}
-	
-
-	return 0;
+	PlayGame();
+	return 0; // einde van het programma
 }
 	
 void PrintIntro() {
@@ -29,13 +23,23 @@ void PrintIntro() {
 	return;
 }
 
-string GetGuessAndPrintBack() {
+void PlayGame() 
+{
+	// loop het aantal keren dat gevraagt word
+	constexpr int NUMBER_OF_TURNS = 5;
+
+	for (int count = 1; count <= NUMBER_OF_TURNS; count++) {
+	string Guess = GetGues();
+	cout << "Your guess was: " << Guess << endl;
+	}
+	
+}
+
+string GetGues() {
 	// krijg een woord van de speler
 	string Guess = "";
 	cout << "Enter your guess: ";
 	getline(cin, Guess);
 	cout << endl;
-	// toon de input van de speler terug
-	cout << "Your guess was: " << Guess << endl;
 	return Guess;
 }
