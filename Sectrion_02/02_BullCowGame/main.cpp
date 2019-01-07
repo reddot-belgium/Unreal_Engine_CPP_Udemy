@@ -13,9 +13,16 @@ int main() {
 	// krijg een woord van de speler
 	string Guess = "";
 	cout << "Enter your guess: ";
-	cin >> Guess;
+	getline(cin, Guess);
 	cout << endl;
 	// toon de input van de speler terug
+	cout << "Your guess was: " << Guess << endl;
+
+	// krijg tweede woord van de speler
+	cout << "Enter your guess: ";
+	getline(cin, Guess);
+	cout << endl;
+	// toon de input 2 van de speler terug
 	cout << "Your guess was: " << Guess << endl;
 
 	return 0;
