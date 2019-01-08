@@ -32,11 +32,11 @@ void PrintIntro() {
 
 void PlayGame() 
 {
-	
+	BCGame.Reset();
 	int MaxTries = BCGame.GetMaxTries();
 
 	// loop het aantal keren dat gevraagt word
-	for (int i; i <= MaxTries; i++) {
+	for (int count = 1; count <= MaxTries; count++) {
 	std::string Guess = GetGues();
 	std::cout << "Your guess was: " << Guess << std::endl;
 	}
